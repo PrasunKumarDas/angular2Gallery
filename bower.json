@@ -1,0 +1,18 @@
+{
+  "name": "angular2gallery",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/PrasunKumarDas/angular2Gallery",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
