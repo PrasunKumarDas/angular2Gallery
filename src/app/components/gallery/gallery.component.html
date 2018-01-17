@@ -2,14 +2,14 @@
 <div class="container">
 
       <h1 class="my-4 text-center text-lg-left">Thumbnail Gallery</h1>
-<button class="btn btn-info" [class.active]="filterBy==all" (click)="filterBy='all'">All</button> 
-<button class="btn btn-info" [class.active]="filterBy==cricket" (click)="filterBy='cricket'">Cricket</button> 
-<button class="btn btn-info" [class.active]="filterBy==football" (click)="filterBy='football'">Football</button> 
-<button class="btn btn-info" [class.active]="filterBy==volly" (click)="filterBy='volly'">Vollyball</button> 
+		<button class="btn btn-info" [class.active]="filterBy==all" (click)="filterBy='all'">All</button> 
+		<button class="btn btn-info" [class.active]="filterBy==cricket" (click)="filterBy='cricket'">Cricket</button> 
+		<button class="btn btn-info" [class.active]="filterBy==football" (click)="filterBy='football'">Football</button> 
+		<button class="btn btn-info" [class.active]="filterBy==volly" (click)="filterBy='volly'">Vollyball</button> 
       <div class="row text-center text-lg-left">
 
         <div class="col-lg-3 col-md-4 col-xs-6" *ngFor="let visualImage of visualImages | imageFilter:filterBy">
-          <a href="#" class="d-block mb-4 h-100">
+          <a [routerLink]="['/image',visualImage.id]" class="d-block mb-4 h-100">
             <img class="img-fluid img-thumbnail"  src="{{visualImage.imageurl}}" width="200" height="200" alt="">
           </a>
         </div>
